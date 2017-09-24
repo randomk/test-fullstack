@@ -1,0 +1,95 @@
+{
+	"variables": [],
+	"info": {
+		"name": "test-fullstack",
+		"_postman_id": "9ae4a312-20c4-abdc-0f26-4687ee694a5a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api status",
+			"request": {
+				"url": "http://localhost:5000/api/status",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"url": "http://localhost:5000/api/user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\" : \"joze\",\n\t\"email\" : \"joze@email.com\",\n\t\"telefone\": \"274158896\",\n\t\"sexo\" : \"M\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List all Users",
+			"request": {
+				"url": "http://localhost:5000/api/user",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get User by Id",
+			"request": {
+				"url": "http://localhost:5000/api/user/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Remove User by Id",
+			"request": {
+				"url": "http://localhost:5000/api/user/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update User By Id",
+			"request": {
+				"url": "http://localhost:5000/api/user/2",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\" : \"joze\",\n\t\"email\" : \"jozenewmail@emai.com\",\n\t\"telefone\": \"274158896\",\n\t\"sexo\" : \"M\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
