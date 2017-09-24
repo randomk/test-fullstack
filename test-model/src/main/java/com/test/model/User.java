@@ -1,5 +1,6 @@
 package com.test.model;
 
+import com.sun.istack.internal.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -20,9 +21,16 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotNull(message = "Campo nome não pode ser nulo")
     private String nome;
+
+    @NotNull(message = "Campo email não pode ser nulo")
     private String email;
+
+    @NotNull(message="Campo telefone não pode ser nulo")
     private String telefone;
+
+    @NotNull(message="Campo sexo não pode ser nulo")
     private String sexo;
 
 }
