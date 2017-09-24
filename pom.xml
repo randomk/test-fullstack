@@ -14,12 +14,15 @@
         <module>test-ui</module>
         <module>test-model</module>
         <module>test-service</module>
+        <module>test-config</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
         <spring.boot.version>1.5.7.RELEASE</spring.boot.version>
         <lombok.version>1.16.18</lombok.version>
+        <HikariCP.version>2.7.1</HikariCP.version>
+        <mysql-connector-java.version>5.1.40</mysql-connector-java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-eclipse-plugin.wtpversion>2.0</maven-eclipse-plugin.wtpversion>
     </properties>
@@ -48,6 +51,11 @@
                 <artifactId>test-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.test</groupId>
+                <artifactId>test-config</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
             <!-- BOM -->
             <!-- SPRING BOOT -->
@@ -67,6 +75,20 @@
                 <version>${lombok.version}</version>
             </dependency>
 
+            <!-- HIKARICP -->
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>${HikariCP.version}</version>
+            </dependency>
+
+            <!-- MYSQL DRIVER -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -75,6 +97,27 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.tomcat</groupId>
+                    <artifactId>tomcat-jdbc</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
     </dependencies>
 
