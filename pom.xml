@@ -15,6 +15,7 @@
         <module>test-model</module>
         <module>test-service</module>
         <module>test-config</module>
+        <module>test-repository</module>
     </modules>
 
     <properties>
@@ -54,6 +55,11 @@
             <dependency>
                 <groupId>com.test</groupId>
                 <artifactId>test-config</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.test</groupId>
+                <artifactId>test-repository</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
