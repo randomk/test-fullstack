@@ -12,11 +12,10 @@
 
 	<dependencies>
 	
-		<!-- Test -->
+		<!-- INTERNAL -->
 		<dependency>
 			<groupId>com.test</groupId>
 			<artifactId>test-model</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
 		<!-- Spring Framework -->
