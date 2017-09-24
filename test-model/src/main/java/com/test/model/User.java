@@ -1,4 +1,4 @@
-package com.test.model.api.response;
+package com.test.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
