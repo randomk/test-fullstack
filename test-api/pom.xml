@@ -18,6 +18,11 @@
 			<artifactId>test-model</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>com.test</groupId>
+			<artifactId>test-service</artifactId>
+		</dependency>
+
 		<!-- Spring Framework -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
