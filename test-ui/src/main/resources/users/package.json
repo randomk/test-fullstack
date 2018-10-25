@@ -1,0 +1,11 @@
+{
+	"name": "test",
+	"version": "0.0.1",
+	"description": "test fullstac",
+	"author": "Rafael Silva<rafafspld@gmail.com.br>",
+	"devDependencies": {
+		"gulp": "*",
+		"gulp-uglify": "*",
+		"gulp-concat": "*"
+	}
+}
