@@ -9,13 +9,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
- * Start da aplicação
- * @author esdrastavares
+ *
+ * @author rafaelsilva
  *
  */
 @SpringBootApplication
 @ComponentScan({
-	"com.test.api"
+	"com.test.*"
 })
 public class TestMain {
 
