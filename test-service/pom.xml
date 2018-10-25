@@ -1,13 +1,33 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-  	<artifactId>test-service</artifactId>
-	<name>Test Full Stack Service</name>
-	
+
 	<parent>
-		<groupId>com.test</groupId>
 		<artifactId>test</artifactId>
+		<groupId>com.test</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	
+
+	<artifactId>test-service</artifactId>
+	<groupId>com.test.service</groupId>
+
+	<build>
+		<finalName>test-service</finalName>
+	</build>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<artifactId>test-config</artifactId>
+			<groupId>com.test.config</groupId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 </project>
